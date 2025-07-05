@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Library Attendance System</h1>
+        
+        <div class="scanner-container">
+            <div id="scanner"></div>
+            <button id="start-scanner">Start Scanner</button>
+            <button id="stop-scanner" disabled>Stop Scanner</button>
+        </div>
+        
+        <div class="attendance-form">
+            <input type="text" id="barcode-input" placeholder="Scan or enter barcode">
+            <button id="submit-attendance">Submit Attendance</button>
+        </div>
+        
+        <div class="attendance-list">
+            <h2>Today's Attendance</h2>
+            <table id="attendance-table">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Time In</th>
+                    </tr>
+                </thead>
+                <tbody id="attendance-body">
+                    <!-- Attendance records will appear here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="scanner.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
